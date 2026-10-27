@@ -1,0 +1,23 @@
+id: nmap
+name: nmap service discovery
+kind: integration
+tags: [discovery, scanning]
+provides: [discovery]
+version: "1.3"
+labdex: ">=1.10,<2"
+description: Scans inventory networks with nmap (TCP connect, no root needed) and lists the services that are actually listening.
+settings:
+  - {key: networks, label: Networks to scan, type: networks, help: Inventory networks; empty = every network with an IPv4 prefix}
+  - {key: extra_targets, label: Extra targets, type: list, help: Addresses or CIDRs; must lie inside an inventory network}
+  - {key: exclude, label: Exclude, type: list, help: Addresses or CIDRs never to scan}
+  - {key: ports, label: Ports, type: string, default: "top:200", help: "top:N, or an nmap port list like 22,80,443,8000-8100"}
+  - {key: service_ports, label: Also check every declared service port, type: bool, default: true, help: "Ports of the inventory's services are scanned on their hosts even when they aren't in the list above, so a service on port 32400 isn't shown as not answering just because nobody looked"}
+  - {key: service_detection, label: Detect service versions (-sV), type: bool, default: true}
+  - {key: timing, label: Timing, type: select, default: T3, options: [T2, T3, T4]}
+  - {key: max_hosts, label: Refuse to scan more than … addresses, type: int, default: 2048}
+  - {key: timeout, label: Abort after … seconds, type: int, default: 1800}
+  - {key: ipv6, label: Also scan known IPv6 addresses, type: bool, default: true, help: "A /64 can't be swept: this scans the IPv6 addresses of the inventory's hosts and those Discovery learned (NDP, DHCPv6) inside the chosen networks"}
+actions:
+  - {id: scan, label: Scan now, mode: run, schedulable: true}
+widgets:
+  - {id: ports, label: Open ports, where: host, refresh: 120}
