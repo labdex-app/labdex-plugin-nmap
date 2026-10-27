@@ -1,6 +1,6 @@
 nmap service discovery, a plugin for labdex
 Copyright (C) reykimedev and the labdex contributors
-https://github.com/reykimedev/labdex-plugin-nmap
+https://github.com/labdex-app/labdex-plugin-nmap
 
 This program is free software: you can redistribute it and/or modify it under the terms
 of the GNU Affero General Public License version 3 as published by the Free Software

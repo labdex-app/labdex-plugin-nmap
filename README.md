@@ -1,6 +1,6 @@
 # nmap service discovery
 
-A [labdex](https://github.com/reykimedev/labdex) plugin. Scans inventory networks with nmap (TCP connect, no root needed) and lists the services that are actually listening.
+A [labdex](https://github.com/labdex-app/labdex) plugin. Scans inventory networks with nmap (TCP connect, no root needed) and lists the services that are actually listening.
 
 **Version** 1.3 · **Works with** labdex >=1.10,<2 · **Plugin id** `nmap`
 
