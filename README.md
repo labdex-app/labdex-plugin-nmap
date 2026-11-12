@@ -1,5 +1,7 @@
 # nmap service discovery
 
+[![Release](https://github.com/labdex-app/labdex-plugin-nmap/actions/workflows/release.yml/badge.svg)](https://github.com/labdex-app/labdex-plugin-nmap/actions/workflows/release.yml) [![Buy Me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-bitsandbricks-7c3aed?logo=buymeacoffee&logoColor=white&labelColor=181b20)](https://buymeacoffee.com/bitsandbricks)
+
 A [labdex](https://github.com/labdex-app/labdex) plugin. Scans inventory networks with nmap (TCP connect, no root needed) and lists the services that are actually listening.
 
 **Version** 1.3 · **Works with** labdex >=1.10,<2 · **Plugin id** `nmap`
